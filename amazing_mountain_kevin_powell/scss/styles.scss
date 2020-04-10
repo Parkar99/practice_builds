@@ -1,1 +1,113 @@
 @import "config";
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.125rem;
+  color: $primary-dark-color;
+  line-height: 1.6;
+  //   background-color: gray;
+}
+
+.header {
+  background-color: $primary-light-color;
+  text-align: center;
+
+  &__logo {
+    margin: 1em 0 0 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: $fw-bold;
+    letter-spacing: 1px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__weather {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    background-color: $primary-dark-color;
+    color: $primary-light-color;
+  }
+
+  &__icon {
+    grid-row: span 2;
+    background-color: $primary-color;
+    padding: 1em;
+    display: flex;
+  }
+
+  &__info {
+    text-align: left;
+    margin-left: 1em;
+    color: rgba($primary-light-color, 0.7);
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      position: relative;
+      margin-top: 0.5em;
+      margin-bottom: 0.25em;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.25em;
+        background-color: $primary-light-color;
+        opacity: 0.25;
+        height: 2px;
+        width: calc(100% - 0.75rem);
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0.5em;
+    }
+
+    & span {
+      color: rgba($primary-light-color, 1);
+      margin-left: auto;
+      margin-right: 1em;
+      font-size: 1rem;
+      text-transform: none;
+    }
+  }
+}
+
+.main {
+  background-image: url("../images/backround.png");
+  background-size: cover;
+  padding: 3em 1em;
+
+  &__title {
+    line-height: 1.2;
+    margin-bottom: 1em;
+    font-weight: $fw-black;
+    font-size: 3em;
+  }
+
+  &__info {
+    margin-bottom: 1.5em;
+  }
+}
+
+@import "utils";
+@import "media";

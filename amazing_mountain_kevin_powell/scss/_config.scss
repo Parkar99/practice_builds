@@ -1,3 +1,25 @@
 // Google Fonts Link
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap");
 // font-family: 'Work Sans', sans-serif;
+
+// Universal Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Colors
+$primary-color: #f70058;
+$primary-light-color: #ffffff;
+$primary-dark-color: #0c0e36;
+
+// Font Weights
+$fw-normal: 400;
+$fw-bold: 700;
+$fw-black: 900;
+
+// Grid
+$grid: 1fr;
